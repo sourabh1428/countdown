@@ -30,7 +30,11 @@ function createCard(a, b, c) {
     let myFun = setInterval(function () {
         if (a < 1 && c < 1 && b < 1) {
             play1();
-            newr.innerHTML = `<div class="completed"><h1>Time Over!</h1><button onclick="buzzer()">Stop</button></div>`;
+            if(newr){
+                newr.innerHTML = `<div class="completed"><h1>Time Over!</h1><button onclick="buzzer()">Stop</button></div>`;
+                newr.removeChild();
+             
+            }
             clearInterval(myFun);
         }
         if (a >= 1 && c < 1 && b < 1) {
@@ -46,7 +50,12 @@ function createCard(a, b, c) {
         }
     }, 1000);
 }
-
+function buzzer(){
+    const newr = document.getElementById("jue");
+    if (newr) {
+        newr.remove();
+    }
+}
 function handleDelete() {
     const newr = document.getElementById("jue");
     if (newr) {
