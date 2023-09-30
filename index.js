@@ -46,7 +46,7 @@ function createCard(a, b, c) {
             b--;
         } else {
             c--;
-            newr.innerHTML = `<div class="addCart"><p>Time Left :</p><h1>${a}</h1><h1>${b}</h1><h1>${c}</h1><button onclick="handleDelete()">Delete</button></div>`;
+            newr.innerHTML = `<div class="addCart"><p>Time Left :</p><h1>${a}</h1><h1>:</h1><h1>${b}</h1><h1>:</h1><h1>${c}</h1><button onclick="handleDelete()">Delete</button></div>`;
         }
     }, 1000);
 }
